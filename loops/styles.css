@@ -1,0 +1,101 @@
+body {
+  margin: 3rem;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(246, 161, 2);
+  text-shadow: 1px 1px 1px rgba(96, 89, 89, 0.4);
+}
+
+section {
+  margin: 2rem auto;
+  width: 95%;
+  max-width: 50rem;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  background-color: rgb(253, 251, 216);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  background-color: rgb(236, 202, 8);
+  border: 1px solid rgb(236, 202, 8);
+  color: rgb(29, 28, 26);
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: rgb(236, 183, 8);
+  border-color: rgb(236, 183, 8);
+}
+
+.control {
+  margin: 1rem 0;
+}
+
+label, 
+input {
+  display: block;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  font: inherit;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  border: 1px solid rgb(156, 153, 136);
+  width: 3rem;
+  max-width: 100%;
+  padding: 0.5rem;
+  color: rgb(66, 63, 44);
+}
+
+input:focus {
+  background-color: rgb(248, 239, 187);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(236, 145, 8);
+}
+
+.output {
+  font-weight: bold;
+  background-color: rgb(233, 191, 55);
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+
+a.highlight {
+  background-color: rgba(63, 4, 141, 0.8);
+  padding: 0.25rem;
+}
+
+#calculated-sum {
+  padding: 1rem;
+  text-align: center;
+  font-size: 3rem;
+  display: none;
+}
+#user-data li{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.80rem;
+  margin-bottom: 1rem;
+}
+.actions a{
+  padding: 0.375rem;
+  text-shadow: none;
+  border-radius: 3px;
+}
+.actions a:hover{
+  color: rgb(246, 202, 58);
+}
