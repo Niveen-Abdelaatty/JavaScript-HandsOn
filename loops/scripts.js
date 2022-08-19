@@ -15,6 +15,7 @@ function calculateSum() {
 
 calButton.addEventListener("click", calculateSum);
 
+
 // Highlight Links Script
 const linksArray = document.querySelectorAll("#highlight-links a");
 const highlightBtn = document.getElementById("highlight-btn");
@@ -26,6 +27,7 @@ function highlightLinks() {
 }
 
 highlightBtn.addEventListener("click", highlightLinks);
+
 
 // Display data stored into an object Script
 const dummyUserData = {
@@ -54,4 +56,40 @@ function displayUserData(){
 
 userDataDisplayBtn.addEventListener('click', displayUserData);
 
+
 // Statistics Script
+const dicRollsListELement = document.getElementById('dice-rolls');
+const rollDiceBtn = document.getElementById('roll-dice-btn');
+
+function rollDice(){
+  return Math.floor(Math.random() * 6) + 1;
+}
+
+function deriveNumberOfDiceRolls(){
+
+const TargetNumberInputElement = document.getElementById('user-target-number');
+const outputTotalRollsElement = document.getElementById('output-total-rolls');
+const outputTargetNumberElement = document.getElementById('output-target-number');
+
+  const enteredNum = TargetNumberInputElement.value;
+  dicRollsListELement.innerHTML = '';
+
+  let hasRolledTargetNumber = false;
+  let numberOfRolls = 0;
+
+  while(!hasRolledTargetNumber){ //looping as long as it's true
+    
+    const rolledNumber = rollDice(); 
+    numberOfRolls++;
+
+    const newRollListItemElement = document.createElement('li');
+    const outputText = 'Roll ' + numberOfRolls + ': ' + rolledNumber;
+    newRollListItemElement.textContent = outputText;
+    dicRollsListELement.append(newRollListItemElement);
+
+    hasRolledTargetNumber = rolledNumber == enteredNum;
+  } 
+  outputTargetNumberElement.textContent =  enteredNum; 
+  outputTotalRollsElement.textContent = numberOfRolls;
+}
+rollDiceBtn.addEventListener('click', deriveNumberOfDiceRolls);
